@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 import { MelodyApp } from "@/components/melody-shell";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportMelodyBlendsError } from "../lib/melodyblends-error-reporting";
 
 function NotFoundComponent() {
   return (

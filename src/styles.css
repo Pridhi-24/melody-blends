@@ -169,7 +169,7 @@
 @utility font-display { font-family: var(--font-display); }
 
 @utility truck-border {
-  background-image: repeating-linear-gradient(90deg, var(--terracotta) 0 16px, var(--marigold) 16px 32px, var(--teal) 32px 48px, var(--indigo) 48px 64px);
+  background-image: repeating-linear-gradient(90deg, var(--terracotta) 0 16px, var(--marigold) 16px 32...);
 }
 
 @utility star-field {

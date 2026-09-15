@@ -27,7 +27,7 @@ export const playlists: ScenicPlaylist[] = [
 ];
 
 export const friends = [
-  { name: "Rahul", initials: "RS", activity: "is listening to Cutting Chai", time: "now", color: "bg-primary" },
+  { name: "Myra", initials: "RS", activity: "is listening to Cutting Chai", time: "now", color: "bg-primary" },
   { name: "Meera", initials: "MK", activity: "added 3 songs to Monsoon Mood", time: "12m", color: "bg-indigo" },
   { name: "Kabir", initials: "KA", activity: "joined your Blend", time: "1h", color: "bg-terracotta" },
   { name: "Zoya", initials: "ZH", activity: "loved Rooftop Mehfil", time: "3h", color: "bg-teal" },

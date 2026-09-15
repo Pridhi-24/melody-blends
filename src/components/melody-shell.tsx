@@ -22,10 +22,13 @@ function Shell({ children }: { children: ReactNode }) {
   if (authPage) return <main>{children}</main>;
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b-4 border-marigold bg-indigo text-cream shadow-xl">
+<header
+  className="sticky top-0 z-50 border-b-4 border-marigold bg-cover bg-center text-cream shadow-xl"
+  style={{ backgroundImage: "url('/nav.png')" }}
+>
         <div className="mx-auto flex h-16 max-w-[1500px] items-center gap-3 px-4 lg:px-8">
           <Link to="/" className="mr-auto flex items-center gap-2" aria-label="Melody Blends home">
-            <span className="grid size-9 place-items-center rounded-full bg-primary text-indigo"><Music2 size={19} /></span>
+            <img src="/logo.png" alt="Melody Blends logo" className="size-9 rounded-full object-cover" />
             <span className="font-display text-xl font-bold md:text-2xl">Melody Blends</span>
           </Link>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
@@ -37,7 +40,7 @@ function Shell({ children }: { children: ReactNode }) {
               <Button variant="ghost" size="icon" className="text-cream hover:bg-cream/10 hover:text-marigold" onClick={() => setNotificationsOpen((open) => !open)} aria-label="Notifications"><Bell/><span className="absolute right-2 top-1.5 size-2 rounded-full bg-marigold" /></Button>
               <AnimatePresence>{notificationsOpen && <motion.div initial={{opacity:0,y:-8}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-8}} className="absolute right-0 top-12 w-80 rounded-lg border border-border bg-card p-4 text-foreground shadow-2xl">
                 <div className="mb-3 flex items-center justify-between"><strong>नई हलचल · Notifications</strong><Button variant="ghost" size="icon" onClick={() => setNotificationsOpen(false)}><X/></Button></div>
-                {["Rahul joined your Highway Blend", "Meera liked Rooftop Mehfil", "Your Monsoon Mix is ready"].map((item, i) => <div key={item} className="border-t border-border py-3 text-sm"><span className="mr-2 text-primary">●</span>{item}<small className="mt-1 block pl-4 text-muted-foreground">{devanagariNumber(i * 7 + 2)} min ago</small></div>)}
+                {["Myra joined your Highway Blend", "Meera liked Rooftop Mehfil", "Your Monsoon Mix is ready"].map((item, i) => <div key={item} className="border-t border-border py-3 text-sm"><span className="mr-2 text-primary">●</span>{item}<small className="mt-1 block pl-4 text-muted-foreground">{devanagariNumber(i * 7 + 2)} min ago</small></div>)}
               </motion.div>}</AnimatePresence>
             </div>
           </div>
